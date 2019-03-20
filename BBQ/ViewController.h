@@ -10,6 +10,17 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *tfToken;
+@property (weak, nonatomic) IBOutlet UITextField *tfUserID;
+@property (weak, nonatomic) IBOutlet UITextView *tvLogView;
+
+//更多
+- (IBAction)MoreAction:(UIButton *)sender;
+//
+- (IBAction)upateAction:(UIButton *)sender;
+
+- (IBAction)buttonAction:(UIButton *)sender;
+
 
 @end
 

@@ -11,8 +11,8 @@
 		589C1FF422425A00004A4405 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C1FF322425A00004A4405 /* ViewController.m */; };
 		589C1FF722425A00004A4405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589C1FF522425A00004A4405 /* Main.storyboard */; };
 		589C1FF922425A02004A4405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589C1FF822425A02004A4405 /* Assets.xcassets */; };
-		589C1FFC22425A02004A4405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589C1FFA22425A02004A4405 /* LaunchScreen.storyboard */; };
 		589C1FFF22425A02004A4405 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C1FFE22425A02004A4405 /* main.m */; };
+		589C2007224278C8004A4405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589C2005224278C8004A4405 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		589C1FF322425A00004A4405 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		589C1FF622425A00004A4405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		589C1FF822425A02004A4405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		589C1FFB22425A02004A4405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		589C1FFD22425A02004A4405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589C1FFE22425A02004A4405 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		589C2006224278C8004A4405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 				589C1FF322425A00004A4405 /* ViewController.m */,
 				589C1FF522425A00004A4405 /* Main.storyboard */,
 				589C1FF822425A02004A4405 /* Assets.xcassets */,
-				589C1FFA22425A02004A4405 /* LaunchScreen.storyboard */,
 				589C1FFD22425A02004A4405 /* Info.plist */,
+				589C2005224278C8004A4405 /* LaunchScreen.storyboard */,
 				589C1FFE22425A02004A4405 /* main.m */,
 			);
 			path = BBQ;
@@ -128,7 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589C1FFC22425A02004A4405 /* LaunchScreen.storyboard in Resources */,
+				589C2007224278C8004A4405 /* LaunchScreen.storyboard in Resources */,
 				589C1FF922425A02004A4405 /* Assets.xcassets in Resources */,
 				589C1FF722425A00004A4405 /* Main.storyboard in Resources */,
 			);
@@ -158,10 +158,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		589C1FFA22425A02004A4405 /* LaunchScreen.storyboard */ = {
+		589C2005224278C8004A4405 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				589C1FFB22425A02004A4405 /* Base */,
+				589C2006224278C8004A4405 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -285,9 +285,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9L66M2KMX;
 				INFOPLIST_FILE = BBQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +304,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9L66M2KMX;
 				INFOPLIST_FILE = BBQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
