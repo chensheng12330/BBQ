@@ -21,6 +21,7 @@
 
 - (IBAction)buttonAction:(UIButton *)sender;
 
+- (IBAction)clearAction:(UIButton *)sender;
 
 @end
 

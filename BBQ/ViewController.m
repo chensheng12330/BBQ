@@ -61,13 +61,12 @@
         return;
     }
     
-    [self.mLog appendFormat:@"%@, %@ \r\n",[NSDate date],str];
+    [self.mLog appendFormat:@"🍀%@, %@ \r\n",[NSDate date],str];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tvLogView setText:self.mLog];
         [self.tvLogView scrollRangeToVisible:NSMakeRange(self.tvLogView.text.length, 1)];
     });
     
-    //self.tvLogView sc
     return;
 }
 
@@ -78,6 +77,7 @@
     }
     else {
         self.mUserId = textField.text;
+        [self upateAction:nil];
     }
 }
 
@@ -137,7 +137,8 @@
         [alert show];
         return;
     }
-    
+
+    [self log:@"😋😛😝😜🤪服务请求中,请稍等..."];
     NSInteger tag = sender.tag;
     if(tag == 1){
         [self net4CurrentTime];
@@ -160,9 +161,14 @@
     return;
 }
 
+- (IBAction)clearAction:(UIButton *)sender {
+
+    [self.mLog setString:@""];
+    [self log:@"已刷新."];
+}
+
 #pragma mark - --网络
-//! 获取服务器时间
--(void) net4CurrentTime {
+- (NSDictionary*) getHeadDict {
 
     NSDictionary *headers = @{ @"Content-Type": @"application/json",
                                @"rstTenantCode": @"5000",
@@ -175,12 +181,19 @@
                                @"Accept-Language": @"zh-cn",
                                @"Accept-Encoding": @"br, gzip, deflate",
                                @"cache-control": @"no-cache"  };
+    return headers;
+}
+
+//! 获取服务器时间
+-(void) net4CurrentTime {
+
+
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-activity/system/currentTime"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
@@ -198,24 +211,12 @@
 
 //! 空操作
 -(void) net4NullReq1 {
-   
-    NSDictionary *headers = @{ @"Content-Type": @"application/json",
-                               @"rstTenantCode": @"5000",
-                               @"Accept": @"*/*",
-                               @"Connection": @"keep-alive",
-                               @"Cookie":  K_GetToken,
-                               @"rstWxAppId": @"wx067bb2c9b50e62bc",
-                               @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN",
-                               @"Referer": @"https://servicewechat.com/wx067bb2c9b50e62bc/7/page-frame.html",
-                               @"Accept-Language": @"zh-cn",
-                               @"Accept-Encoding": @"br, gzip, deflate",
-                               @"cache-control": @"no-cache" };
-    
+
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-business/activityInfo/listOfOpened"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
@@ -232,23 +233,12 @@
 
 //! 空操作
 -(void) net4NullReq2 {
-    NSDictionary *headers = @{ @"Content-Type": @"application/json",
-                               @"rstTenantCode": @"5000",
-                               @"Accept": @"*/*",
-                               @"Connection": @"keep-alive",
-                               @"Cookie":  K_GetToken,
-                               @"rstWxAppId": @"wx067bb2c9b50e62bc",
-                               @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN",
-                               @"Referer": @"https://servicewechat.com/wx067bb2c9b50e62bc/7/page-frame.html",
-                               @"Accept-Language": @"zh-cn",
-                               @"Accept-Encoding": @"br, gzip, deflate",
-                               @"cache-control": @"no-cache" };
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-activity/activityInfo/list"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
@@ -265,17 +255,7 @@
 //! 上传地理位置
 -(void) net4SetLocation {
 
-    NSDictionary *headers = @{ @"Content-Type": @"application/json",
-                               @"rstTenantCode": @"5000",
-                               @"Accept": @"*/*",
-                               @"Connection": @"keep-alive",
-                               @"Cookie":  K_GetToken,
-                               @"rstWxAppId": @"wx067bb2c9b50e62bc",
-                               @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN",
-                               @"Referer": @"https://servicewechat.com/wx067bb2c9b50e62bc/7/page-frame.html",
-                               @"Accept-Language": @"zh-cn",
-                               @"Accept-Encoding": @"br, gzip, deflate",
-                               @"cache-control": @"no-cache" };
+
     NSDictionary *parameters = @{ @"accuracy": @65,
                                   @"horizontalAccuracy": @65,
                                   @"latitude": @22.564407348632812,
@@ -290,7 +270,7 @@
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     [request setHTTPBody:postData];
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -310,25 +290,12 @@
 
 //! 获取可抽次数
 -(void) net4BBNum {
-  
-    NSDictionary *headers = @{ @"Content-Type": @"application/json",
-                               @"rstTenantCode": @"5000",
-                               @"Accept": @"*/*",
-                               @"Connection": @"keep-alive",
-                               @"Cookie":  K_GetToken,
-                               @"rstWxAppId": @"wx067bb2c9b50e62bc",
-                               @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN",
-                               @"Referer": @"https://servicewechat.com/wx067bb2c9b50e62bc/7/page-frame.html",
-                               @"Accept-Language": @"zh-cn",
-                               @"Accept-Encoding": @"br, gzip, deflate",
-                               @"cache-control": @"no-cache",
-                               @"Postman-Token": @"3618ca53-3ff8-4357-99ca-80c0d303ce94" };
-    
+
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/lottery/num/%@",self.mUserId]]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
@@ -338,6 +305,10 @@
                                                     } else {
                                                         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                         NSString *str = [[NSString  alloc] initWithData:data encoding:4];
+
+
+                                                        str = [str stringByReplacingOccurrencesOfString:@"data" withString:@"今日抽奖次数"];
+
                                                         [self log:[NSString stringWithFormat:@"%@", str]];
                                                     }
                                                 }];
@@ -346,23 +317,11 @@
 //! 抽奖
 -(void) net4BBQ {
 
-    NSDictionary *headers = @{ @"Content-Type": @"application/json",
-                               @"rstTenantCode": @"5000",
-                               @"Accept": @"*/*",
-                               @"Connection": @"keep-alive",
-                               @"Cookie":  K_GetToken,
-                               @"rstWxAppId": @"wx067bb2c9b50e62bc",
-                               @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN",
-                               @"Referer": @"https://servicewechat.com/wx067bb2c9b50e62bc/7/page-frame.html",
-                               @"Accept-Language": @"zh-cn",
-                               @"Accept-Encoding": @"br, gzip, deflate",
-                               @"cache-control": @"no-cache"};
-    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/lottery/draw/%@",self.mUserId]]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
@@ -382,23 +341,11 @@
 //! 钱包信息.
 -(void) net4WalletInfo {
 
-    NSDictionary *headers = @{ @"Content-Type": @"application/json",
-                               @"rstTenantCode": @"5000",
-                               @"Accept": @"*/*",
-                               @"Connection": @"keep-alive",
-                               @"Cookie":  K_GetToken,
-                               @"rstWxAppId": @"wx067bb2c9b50e62bc",
-                               @"User-Agent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN",
-                               @"Referer": @"https://servicewechat.com/wx067bb2c9b50e62bc/7/page-frame.html",
-                               @"Accept-Language": @"zh-cn",
-                               @"Accept-Encoding": @"br, gzip, deflate",
-                               @"cache-control": @"no-cache"   };
-    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/initMinePage/%@",self.mUserId]]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
+    [request setAllHTTPHeaderFields:[self getHeadDict]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
@@ -410,11 +357,18 @@
                                                         //[self log:[NSString stringWithFormat:@"%@", httpResponse]];
                                                         
                                                         NSString *str = [[NSString  alloc] initWithData:data encoding:4];
+
+                                                        str = [str stringByReplacingOccurrencesOfString:@"availableIntegral" withString:@"可兑换零钱"];
+
+                                                        str = [str stringByReplacingOccurrencesOfString:@"todayIntegral" withString:@"今日获取"];
+
+                                                        str = [str stringByReplacingOccurrencesOfString:@"totalIntegral" withString:@"历史总额"];
+
                                                         [self log:[NSString stringWithFormat:@"%@", str]];
                                                     }
                                                 }];
     [dataTask resume];
-}
 
+}
 
 @end
