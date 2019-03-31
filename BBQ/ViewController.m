@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <Foundation/Foundation.h>
-
+#import "CouponViewController.h"
 
 #define K_token @"token"
 #define K_userid @"userid"
@@ -29,6 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //初使化数据
+    
+    
     [self setEditing:YES];
     
     self.mLog = [[NSMutableString alloc] init];
@@ -49,6 +51,24 @@
     
     self.tvLogView.editable = NO;
     self.tvLogView.layoutManager.allowsNonContiguousLayout = NO;
+    
+    [self setNaveBarUI];
+    return;
+}
+
+-(void) setNaveBarUI {
+    self.title = @"BBQ";
+    
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:1 green:147/255.0 blue:0 alpha:1];
+    UIButton *btn = [UIButton buttonWithType:0];
+    [btn setTitle:@"更多☀️" forState:0];
+    [btn setTitleColor:[UIColor blackColor] forState:0];
+    [btn addTarget:self action:@selector(MoreAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    //self.navigationController.
+    [self.navigationItem setRightBarButtonItem:rightItem];
+    
     return;
 }
 
@@ -98,8 +118,14 @@
 
 
 #pragma mark - --事件
-- (IBAction)MoreAction:(UIButton *)sender {
+- (void)MoreAction:(UIButton *)sender {
     
+    CouponViewController *vc =[[CouponViewController alloc] init];
+    vc.userId = self.mUserId;
+    vc.token  = self.mToken;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    return;
 }
 
 - (IBAction)upateAction:(UIButton *)sender {
@@ -370,5 +396,6 @@
     [dataTask resume];
 
 }
+
 
 @end

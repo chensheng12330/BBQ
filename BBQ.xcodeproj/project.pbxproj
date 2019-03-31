@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58390D832250B73E008CB07E /* CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58390D822250B73E008CB07E /* CouponViewController.m */; };
+		58390D892250C50A008CB07E /* CouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58390D872250C50A008CB07E /* CouponTableViewCell.m */; };
+		58390D8A2250C50A008CB07E /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58390D882250C50A008CB07E /* CouponTableViewCell.xib */; };
+		58390D8C2250FC8E008CB07E /* CouponTableHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58390D8B2250FC8E008CB07E /* CouponTableHeadView.xib */; };
 		589C1FF122425A00004A4405 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C1FF022425A00004A4405 /* AppDelegate.m */; };
 		589C1FF422425A00004A4405 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C1FF322425A00004A4405 /* ViewController.m */; };
 		589C1FF722425A00004A4405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589C1FF522425A00004A4405 /* Main.storyboard */; };
@@ -16,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58390D812250B73E008CB07E /* CouponViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponViewController.h; sourceTree = "<group>"; };
+		58390D822250B73E008CB07E /* CouponViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponViewController.m; sourceTree = "<group>"; };
+		58390D862250C50A008CB07E /* CouponTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponTableViewCell.h; sourceTree = "<group>"; };
+		58390D872250C50A008CB07E /* CouponTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTableViewCell.m; sourceTree = "<group>"; };
+		58390D882250C50A008CB07E /* CouponTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
+		58390D8B2250FC8E008CB07E /* CouponTableHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponTableHeadView.xib; sourceTree = "<group>"; };
 		589C1FEC22425A00004A4405 /* BBQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589C1FEF22425A00004A4405 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		589C1FF022425A00004A4405 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +72,12 @@
 				589C1FF022425A00004A4405 /* AppDelegate.m */,
 				589C1FF222425A00004A4405 /* ViewController.h */,
 				589C1FF322425A00004A4405 /* ViewController.m */,
+				58390D812250B73E008CB07E /* CouponViewController.h */,
+				58390D822250B73E008CB07E /* CouponViewController.m */,
+				58390D862250C50A008CB07E /* CouponTableViewCell.h */,
+				58390D872250C50A008CB07E /* CouponTableViewCell.m */,
+				58390D882250C50A008CB07E /* CouponTableViewCell.xib */,
+				58390D8B2250FC8E008CB07E /* CouponTableHeadView.xib */,
 				589C1FF522425A00004A4405 /* Main.storyboard */,
 				589C1FF822425A02004A4405 /* Assets.xcassets */,
 				589C1FFD22425A02004A4405 /* Info.plist */,
@@ -131,6 +147,8 @@
 				589C2007224278C8004A4405 /* LaunchScreen.storyboard in Resources */,
 				589C1FF922425A02004A4405 /* Assets.xcassets in Resources */,
 				589C1FF722425A00004A4405 /* Main.storyboard in Resources */,
+				58390D8A2250C50A008CB07E /* CouponTableViewCell.xib in Resources */,
+				58390D8C2250FC8E008CB07E /* CouponTableHeadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58390D832250B73E008CB07E /* CouponViewController.m in Sources */,
 				589C1FF422425A00004A4405 /* ViewController.m in Sources */,
 				589C1FFF22425A02004A4405 /* main.m in Sources */,
+				58390D892250C50A008CB07E /* CouponTableViewCell.m in Sources */,
 				589C1FF122425A00004A4405 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
