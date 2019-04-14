@@ -30,45 +30,26 @@
                         <color key="shadowColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="现金券" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-DP-PEv">
-                        <rect key="frame" x="106" y="4" width="183" height="24"/>
+                        <rect key="frame" x="112" y="22" width="183" height="25.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有效期:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LL-o5-3v2">
-                        <rect key="frame" x="106" y="41" width="56" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="56" id="ME2-7q-FgK"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019.03.18-2019.06.15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-Ei-DfG">
-                        <rect key="frame" x="171" y="42" width="124" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.82779489436619713" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.1715724032" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="6LL-o5-3v2" firstAttribute="centerY" secondItem="7Op-Ei-DfG" secondAttribute="centerY" id="0YE-eo-wpq"/>
                     <constraint firstItem="hDL-tL-8qf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1XF-Gr-PoF"/>
                     <constraint firstItem="hDL-tL-8qf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="51i-AI-hiP"/>
-                    <constraint firstItem="6LL-o5-3v2" firstAttribute="top" secondItem="Ydt-DP-PEv" secondAttribute="bottom" constant="13" id="6u5-Uq-SwX"/>
-                    <constraint firstItem="6LL-o5-3v2" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="ALb-Go-Tfh"/>
                     <constraint firstItem="hDL-tL-8qf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Brv-lY-lIt"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Ydt-DP-PEv" secondAttribute="trailing" constant="15" id="CGD-bx-9WQ"/>
-                    <constraint firstItem="Ydt-DP-PEv" firstAttribute="leading" secondItem="hDL-tL-8qf" secondAttribute="trailing" constant="16" id="Hnu-UW-q3h"/>
-                    <constraint firstItem="Ydt-DP-PEv" firstAttribute="leading" secondItem="6LL-o5-3v2" secondAttribute="leading" id="S4j-oz-Abg"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="7Op-Ei-DfG" secondAttribute="trailing" constant="9" id="VrY-aX-dSM"/>
-                    <constraint firstItem="7Op-Ei-DfG" firstAttribute="leading" secondItem="6LL-o5-3v2" secondAttribute="trailing" constant="9" id="v6w-bQ-Au0"/>
+                    <constraint firstItem="Ydt-DP-PEv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zwy-qc-HdQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ydt-DP-PEv" secondAttribute="trailing" constant="9" id="a0a-cY-vmH"/>
+                    <constraint firstItem="Ydt-DP-PEv" firstAttribute="leading" secondItem="hDL-tL-8qf" secondAttribute="trailing" constant="22" id="kJG-v5-xbU"/>
+                    <constraint firstItem="Ydt-DP-PEv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="yOr-FH-FUU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="lbCouponMoney" destination="hDL-tL-8qf" id="2Sm-09-HwG"/>
+                <outlet property="lbCouponMoney" destination="hDL-tL-8qf" id="0sa-cy-87I"/>
             </connections>
             <point key="canvasLocation" x="-262.39999999999998" y="-143.02848575712144"/>
         </tableViewCell>

@@ -38,8 +38,8 @@
     self.mToken = [[NSUserDefaults standardUserDefaults] objectForKey:K_token];
     self.mUserId = [[NSUserDefaults standardUserDefaults] objectForKey:K_userid];
     
-    //self.mToken =
-    //self.mUserId =
+    self.mToken = @"AAABaZp6CjoAAAAQVTAyNTI5OTI3NjkyNzUwMA";
+    self.mUserId = @"U025299276927500";
     
     [self.tfToken setText:self.mToken];
     [self.tfUserID setText:self.mUserId];
