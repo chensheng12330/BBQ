@@ -38,8 +38,8 @@
     self.mToken = [[NSUserDefaults standardUserDefaults] objectForKey:K_token];
     self.mUserId = [[NSUserDefaults standardUserDefaults] objectForKey:K_userid];
     
-    self.mToken = @"AAABaZp6CjoAAAAQVTAyNTI5OTI3NjkyNzUwMA";
-    self.mUserId = @"U025299276927500";
+    //self.mToken = @"AAABaZp6CjoAAAAQVTAyNTI5OTI3NjkyNzUwMA";
+    //self.mUserId = @"U025299276927500";
     
     [self.tfToken setText:self.mToken];
     [self.tfUserID setText:self.mUserId];
@@ -119,13 +119,30 @@
 
 #pragma mark - --事件
 - (void)MoreAction:(UIButton *)sender {
-    
+
+    if (self.mUserId.length<1 || self.mToken.length<1) {
+        [self showAlert:@"404, 配好token再跟进."];
+        return;
+    }
+
     CouponViewController *vc =[[CouponViewController alloc] init];
     vc.userId = self.mUserId;
     vc.token  = self.mToken;
     
     [self.navigationController pushViewController:vc animated:YES];
     return;
+}
+
+-(void) showAlert:(NSString*) info {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:info preferredStyle:UIAlertControllerStyleAlert];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+
+        NSLog(@"点击取消");
+
+    }]];
+
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (IBAction)upateAction:(UIButton *)sender {

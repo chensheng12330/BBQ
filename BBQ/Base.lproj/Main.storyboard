@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="抓包获取token值" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KV8-dr-rjn">
-                                <rect key="frame" x="87" y="35" width="224" height="30"/>
+                                <rect key="frame" x="93.5" y="35" width="217.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -56,6 +56,11 @@
                                 <state key="normal" title="1、设置地理位置">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPj-jf-dNg"/>
                                 </connections>
@@ -70,25 +75,34 @@
                                 <state key="normal" title="更新">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="upateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUh-cn-j19"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="token:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hr-kO-vfv">
-                                <rect key="frame" x="32" y="40" width="43" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="32" y="40" width="49.5" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="抓包获取userID值" minimumFontSize="12" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O1S-GW-caD">
-                                <rect key="frame" x="87" y="73" width="224" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="抓包获取userID值" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O1S-GW-caD">
+                                <rect key="frame" x="93.5" y="73" width="217.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-vP-E6d">
-                                <rect key="frame" x="32" y="78.5" width="47" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="32" y="78.5" width="54.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54.5" id="DLc-5q-ZBJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -101,6 +115,11 @@
                                 <state key="normal" title="2、获取抽奖次数">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTQ-c7-Ruh"/>
                                 </connections>
@@ -114,6 +133,11 @@
                                 <state key="normal" title="3、我要抽大奖啊">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0dO-Ls-Zkq"/>
                                 </connections>
@@ -127,6 +151,11 @@
                                 <state key="normal" title="4、获取钱包信息">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SbP-Ey-nlJ"/>
                                 </connections>
@@ -184,7 +213,7 @@
                             <constraint firstItem="O1S-GW-caD" firstAttribute="trailing" secondItem="KV8-dr-rjn" secondAttribute="trailing" id="q4Q-dA-Adh"/>
                             <constraint firstItem="ORs-el-kcd" firstAttribute="trailing" secondItem="E8B-Qf-e9q" secondAttribute="trailing" id="qB4-wl-ltG"/>
                             <constraint firstItem="pc1-2V-Adm" firstAttribute="top" secondItem="YvB-dB-Bj2" secondAttribute="bottom" constant="10" id="qnv-l4-uxw"/>
-                            <constraint firstItem="O1S-GW-caD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2gX-vP-E6d" secondAttribute="trailing" constant="7" id="syF-ta-CY1"/>
+                            <constraint firstItem="O1S-GW-caD" firstAttribute="leading" secondItem="2gX-vP-E6d" secondAttribute="trailing" constant="7" id="syF-ta-CY1"/>
                             <constraint firstItem="KV8-dr-rjn" firstAttribute="leading" secondItem="0hr-kO-vfv" secondAttribute="trailing" constant="12" id="tD6-sj-swL"/>
                             <constraint firstItem="2gX-vP-E6d" firstAttribute="leading" secondItem="0hr-kO-vfv" secondAttribute="leading" id="waN-rv-aXM"/>
                         </constraints>

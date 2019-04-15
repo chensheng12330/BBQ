@@ -30,6 +30,8 @@
 @property (nonatomic, strong) NSArray *arConvCouponList;
 @property (nonatomic, strong) NSDictionary *selectConvCoupon;
 
+//
+@property(nonatomic, assign) NSURLRequestCachePolicy mCachePolicy;
 @end
 
 @implementation CouponViewController
@@ -37,6 +39,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+
+    self.mCachePolicy = NSURLRequestReturnCacheDataElseLoad;
     
     self.title = @"我的优惠券";
 
@@ -52,6 +58,8 @@
     
     [refreshControl beginRefreshing];
     [self refresh];
+
+    //self.view.
     
     return;
 }
@@ -81,16 +89,24 @@
     }
     return num;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70.f;
+    float height;
+    if (indexPath.section == 0) {
+        height = 80;
+    }
+    else {
+        height = 70;
+    }
+    return height;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section==0) {
-        return 100;
+        return 80;
     }
-    return 30;
+    return 40;
 }
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section==0) {
@@ -98,8 +114,9 @@
     }
     else {
         UILabel *lab1 = [[UILabel alloc] init];
+        lab1.backgroundColor = [UIColor colorWithRed:253/255.0 green:242/255.0 blue:238/255.0 alpha:1];
         lab1.font =  [UIFont systemFontOfSize:14];
-        lab1.text = @"--兑换券--";
+        lab1.text = @"    😋买买乐购可兑换券😋";
         return lab1;
     }
     
@@ -122,7 +139,7 @@
         
         NSDictionary *info = self.arMyCouponList[indexPath.row];
         
-        cell.lbCouponMoney.text = [NSString stringWithFormat:@"%@",info[K_couponMoney]];
+        cell.lbCouponMoney.text = [NSString stringWithFormat:@"￥%@",info[K_couponMoney]];
         
         retCell = cell;
     }
@@ -142,7 +159,7 @@
     }
     
     //cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
-    
+    //retCell.spa
     return retCell;
 }
 
@@ -207,7 +224,7 @@
 -(void) net4WalletInfo {
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/initMinePage/%@",self.userId]]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                           cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
     [request setAllHTTPHeaderFields:[self getHeadDict]];
@@ -283,7 +300,7 @@
 -(void) net4MMTCouponInfo {
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/MMTCouponInfo/%@",self.userId] ]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                           cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
     [request setAllHTTPHeaderFields:[self getHeadDict]];
@@ -335,7 +352,7 @@
 
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/MMTCouponList"]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                           cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
     [request setAllHTTPHeaderFields:[self getHeadDict]];
@@ -410,7 +427,7 @@
     //@"https://rst.jianli.tech/rst-business/integral/convert/U025299276927500?amount=200&couponCode=yeyaofulihuodong6"
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/integral/convert/%@?amount=%ld&couponCode=%@",self.userId,[self.selectConvCoupon[@"couponMoney"] integerValue], self.selectConvCoupon[@"couponId"]] ]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                           cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
     [request setAllHTTPHeaderFields:[self getHeadDict]];

@@ -24,10 +24,10 @@
 -(void) setAvailableIntegral:(float)availableIntegral
                todayIntegral:(float)todayIntegral
                totalIntegral:(float)totalIntegral {
-    return;
-    self.lbTodayIntegral.text = [NSString stringWithFormat:@"💰%.2f",todayIntegral];
-    self.lbAvailableIntegral.text = [NSString stringWithFormat:@"💰%.2f",availableIntegral];
-    self.lbTotalIntegral.text = [NSString stringWithFormat:@"💰%.2f",totalIntegral];
+
+    self.lbTodayIntegral.text = [NSString stringWithFormat:@" $%.2f",todayIntegral];
+    self.lbAvailableIntegral.text = [NSString stringWithFormat:@"$%.2f",availableIntegral];
+    self.lbTotalIntegral.text = [NSString stringWithFormat:@"$%.2f",totalIntegral];
     return;
 }
 
