@@ -113,6 +113,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="lbCouponMoney" destination="hDL-tL-8qf" id="2Sm-09-HwG"/>
+                <outlet property="lbEffectiveTime" destination="7Op-Ei-DfG" id="fwO-Hc-Ovx"/>
             </connections>
             <point key="canvasLocation" x="-629" y="-186"/>
         </tableViewCell>

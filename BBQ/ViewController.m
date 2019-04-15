@@ -61,7 +61,8 @@
     
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:1 green:147/255.0 blue:0 alpha:1];
     UIButton *btn = [UIButton buttonWithType:0];
-    [btn setTitle:@"更多☀️" forState:0];
+    btn.frame = CGRectMake(0, 0, 80, 40);
+    [btn setTitle:@"更多☀️" forState:0]; //
     [btn setTitleColor:[UIColor blackColor] forState:0];
     [btn addTarget:self action:@selector(MoreAction:) forControlEvents:UIControlEventTouchUpInside];
     

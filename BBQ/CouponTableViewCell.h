@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 //可兑换现金券
 @property (nonatomic, weak) IBOutlet UILabel *lbCouponMoney;
 
+@property (nonatomic, weak) IBOutlet UILabel *lbEffectiveTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

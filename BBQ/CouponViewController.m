@@ -138,7 +138,11 @@
         ///
         
         NSDictionary *info = self.arMyCouponList[indexPath.row];
-        
+        //
+        NSString *strTime = info[K_effectiveEndTime];
+        strTime = [strTime componentsSeparatedByString:@" "].firstObject;
+
+        cell.lbEffectiveTime.text = [NSString stringWithFormat:@"有效期至-%@",strTime];
         cell.lbCouponMoney.text = [NSString stringWithFormat:@"￥%@",info[K_couponMoney]];
         
         retCell = cell;
@@ -154,7 +158,7 @@
         
         NSDictionary *info = self.arConvCouponList[indexPath.row];
         
-        cell.lbCouponMoney.text = [NSString stringWithFormat:@"%@",info[K_couponMoney]];
+        cell.lbCouponMoney.text = [NSString stringWithFormat:@"￥%@",info[K_couponMoney]];
         retCell = cell;
     }
     
