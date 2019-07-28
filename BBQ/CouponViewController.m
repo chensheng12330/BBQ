@@ -227,7 +227,7 @@
 //! 钱包信息.
 -(void) net4WalletInfo {
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/initMinePage/%@",self.userId]]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.bqjr.cn/rst-business/bqjrMiniPortal/initMinePage/%@",self.userId]]
                                                            cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -303,7 +303,7 @@
 
 -(void) net4MMTCouponInfo {
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/MMTCouponInfo/%@",self.userId] ]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.bqjr.cn/rst-business/bqjrMiniPortal/MMTCouponInfo/%@",self.userId] ]
                                                            cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -355,7 +355,7 @@
 -(void)net4CanUseCouponList {
 
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/MMTCouponList"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.bqjr.cn/rst-business/bqjrMiniPortal/MMTCouponList"]
                                                            cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -428,9 +428,9 @@
 
 -(void) net4ConvertCoupon {
     //NSNumber *couponMoney = ;
-    //@"https://rst.jianli.tech/rst-business/integral/convert/U025299276927500?amount=200&couponCode=yeyaofulihuodong6"
+    //@"https://rst.bqjr.cn/rst-business/integral/convert/U025299276927500?amount=200&couponCode=yeyaofulihuodong6"
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/integral/convert/%@?amount=%ld&couponCode=%@",self.userId,[self.selectConvCoupon[@"couponMoney"] integerValue], self.selectConvCoupon[@"couponId"]] ]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.bqjr.cn/rst-business/integral/convert/%@?amount=%ld&couponCode=%@",self.userId,[self.selectConvCoupon[@"couponMoney"] integerValue], self.selectConvCoupon[@"couponId"]] ]
                                                            cachePolicy:self.mCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];

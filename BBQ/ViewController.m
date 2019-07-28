@@ -38,8 +38,8 @@
     self.mToken = [[NSUserDefaults standardUserDefaults] objectForKey:K_token];
     self.mUserId = [[NSUserDefaults standardUserDefaults] objectForKey:K_userid];
     
-    //self.mToken = @"AAABaZp6CjoAAAAQVTAyNTI5OTI3NjkyNzUwMA";
-    //self.mUserId = @"U025299276927500";
+    self.mToken = @"AAABbDje8msAAAAQVTAyNTI5OTI3NjkyNzUwMA";
+    self.mUserId = @"U025299276927500";
     
     [self.tfToken setText:self.mToken];
     [self.tfUserID setText:self.mUserId];
@@ -233,7 +233,7 @@
 
 
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-activity/system/currentTime"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.bqjr.cn/rst-activity/system/currentTime"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -256,7 +256,7 @@
 //! 空操作
 -(void) net4NullReq1 {
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-business/activityInfo/listOfOpened"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.bqjr.cn/rst-business/activityInfo/listOfOpened"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -278,7 +278,7 @@
 //! 空操作
 -(void) net4NullReq2 {
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-activity/activityInfo/list"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.bqjr.cn/rst-activity/activityInfo/list"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -310,7 +310,7 @@
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.jianli.tech/rst-business/location"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://rst.bqjr.cn/rst-business/location"]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
@@ -335,7 +335,7 @@
 //! 获取可抽次数
 -(void) net4BBNum {
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/lottery/num/%@",self.mUserId]]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.bqjr.cn/rst-business/lottery/num/%@",self.mUserId]]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -361,7 +361,7 @@
 //! 抽奖
 -(void) net4BBQ {
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/lottery/draw/%@",self.mUserId]]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.bqjr.cn/rst-business/lottery/draw/%@",self.mUserId]]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
@@ -385,7 +385,7 @@
 //! 钱包信息.
 -(void) net4WalletInfo {
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.jianli.tech/rst-business/bqjrMiniPortal/initMinePage/%@",self.mUserId]]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://rst.bqjr.cn/rst-business/bqjrMiniPortal/initMinePage/%@",self.mUserId]]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:10.0];
     [request setHTTPMethod:@"GET"];
