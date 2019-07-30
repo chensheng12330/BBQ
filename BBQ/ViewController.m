@@ -53,6 +53,9 @@
     self.tvLogView.layoutManager.allowsNonContiguousLayout = NO;
     
     [self setNaveBarUI];
+
+    [self timeProcess];
+
     return;
 }
 
@@ -116,7 +119,37 @@
     return YES;
 }
 
+#pragma mark - --内部函数
 
+//读取本地配置定时任务信息
+-(void)  timeProcess {
+
+    // 今天的基准时间.
+    NSDate *currentDate = [NSDate date];//当前时间
+    NSCalendar *calendar = [NSCalendar currentCalendar];//当前用户的calendar
+    NSDateComponents * components = [calendar components:
+                                     NSCalendarUnitSecond   | NSCalendarUnitMinute | NSCalendarUnitHour |  NSCalendarUnitDay   | kCFCalendarUnitWeekday
+                                                fromDate:currentDate];
+    //排除掉今天是周未
+    // 周日 1  周一 2
+    if (components.weekday == 1 || components.weekday == 7) {
+        return;
+    }
+
+    //19:00
+    if(  components.hour == 19 && components.minute<30){
+        [self net4BBQ];
+        [self net4WalletInfo];
+    }
+
+    //20:30   || components.hour>20
+    if(  components.hour == 20 && components.minute<50){
+        [self net4SetLocation];
+        [self net4BBNum];
+        return;
+    }
+    return;
+}
 
 #pragma mark - --事件
 - (void)MoreAction:(UIButton *)sender {

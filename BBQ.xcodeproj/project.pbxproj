@@ -19,7 +19,40 @@
 		589C1FF922425A02004A4405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589C1FF822425A02004A4405 /* Assets.xcassets */; };
 		589C1FFF22425A02004A4405 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C1FFE22425A02004A4405 /* main.m */; };
 		589C2007224278C8004A4405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589C2005224278C8004A4405 /* LaunchScreen.storyboard */; };
+		D4B70C7322F01DF600439B00 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B70C7222F01DF600439B00 /* UserNotifications.framework */; };
+		D4B70C7522F01DF700439B00 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B70C7422F01DF600439B00 /* UserNotificationsUI.framework */; };
+		D4B70C7922F01DF700439B00 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B70C7822F01DF700439B00 /* NotificationViewController.m */; };
+		D4B70C7C22F01DF700439B00 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B70C7A22F01DF700439B00 /* MainInterface.storyboard */; };
+		D4B70C8022F01DF700439B00 /* BBQNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4B70C7022F01DF600439B00 /* BBQNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4B70C8722F0236D00439B00 /* mylog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B70C8622F0236D00439B00 /* mylog@2x.png */; };
+		D4B70C8822F0238700439B00 /* mylog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B70C8622F0236D00439B00 /* mylog@2x.png */; };
+		D4D6CC3D22EED64300280580 /* SHLocalNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D6CC3C22EED64300280580 /* SHLocalNotice.m */; };
+		D4D6CC4222EEDB8100280580 /* IPSaveDefaluts.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D6CC4022EEDB8100280580 /* IPSaveDefaluts.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4B70C7E22F01DF700439B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 589C1FE422425A00004A4405 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B70C6F22F01DF600439B00;
+			remoteInfo = BBQNotificationContent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4B70C8422F01DF700439B00 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D4B70C8022F01DF700439B00 /* BBQNotificationContent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5814361D22631A08004B9974 /* CouponTableHeadViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponTableHeadViewCell.h; sourceTree = "<group>"; };
@@ -41,6 +74,20 @@
 		589C1FFD22425A02004A4405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589C1FFE22425A02004A4405 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		589C2006224278C8004A4405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4AD6D9922E6F49100D8DE06 /* BBQ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBQ.entitlements; sourceTree = "<group>"; };
+		D4B70C7022F01DF600439B00 /* BBQNotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BBQNotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B70C7222F01DF600439B00 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D4B70C7422F01DF600439B00 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		D4B70C7722F01DF700439B00 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		D4B70C7822F01DF700439B00 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		D4B70C7B22F01DF700439B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D4B70C7D22F01DF700439B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B70C8622F0236D00439B00 /* mylog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mylog@2x.png"; sourceTree = "<group>"; };
+		D4D6CC3B22EED64300280580 /* SHLocalNotice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHLocalNotice.h; sourceTree = "<group>"; };
+		D4D6CC3C22EED64300280580 /* SHLocalNotice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLocalNotice.m; sourceTree = "<group>"; };
+		D4D6CC3F22EEDB7700280580 /* JKUserDefaultKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUserDefaultKeys.h; sourceTree = "<group>"; };
+		D4D6CC4022EEDB8100280580 /* IPSaveDefaluts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSaveDefaluts.m; sourceTree = "<group>"; };
+		D4D6CC4122EEDB8100280580 /* IPSaveDefaluts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSaveDefaluts.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,13 +98,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4B70C6D22F01DF600439B00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B70C7522F01DF700439B00 /* UserNotificationsUI.framework in Frameworks */,
+				D4B70C7322F01DF600439B00 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		589C1FE322425A00004A4405 = {
 			isa = PBXGroup;
 			children = (
+				D4B70C8522F0236D00439B00 /* Resource */,
 				589C1FEE22425A00004A4405 /* BBQ */,
+				D4B70C7622F01DF700439B00 /* BBQNotificationContent */,
+				D4B70C7122F01DF600439B00 /* Frameworks */,
 				589C1FED22425A00004A4405 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				589C1FEC22425A00004A4405 /* BBQ.app */,
+				D4B70C7022F01DF600439B00 /* BBQNotificationContent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,10 +133,14 @@
 		589C1FEE22425A00004A4405 /* BBQ */ = {
 			isa = PBXGroup;
 			children = (
+				D4D6CC3E22EEDAEB00280580 /* Tools */,
+				D4AD6D9922E6F49100D8DE06 /* BBQ.entitlements */,
 				589C1FEF22425A00004A4405 /* AppDelegate.h */,
 				589C1FF022425A00004A4405 /* AppDelegate.m */,
 				589C1FF222425A00004A4405 /* ViewController.h */,
 				589C1FF322425A00004A4405 /* ViewController.m */,
+				D4D6CC3B22EED64300280580 /* SHLocalNotice.h */,
+				D4D6CC3C22EED64300280580 /* SHLocalNotice.m */,
 				58390D812250B73E008CB07E /* CouponViewController.h */,
 				58390D822250B73E008CB07E /* CouponViewController.m */,
 				58390D862250C50A008CB07E /* CouponTableViewCell.h */,
@@ -95,6 +159,44 @@
 			path = BBQ;
 			sourceTree = "<group>";
 		};
+		D4B70C7122F01DF600439B00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4B70C7222F01DF600439B00 /* UserNotifications.framework */,
+				D4B70C7422F01DF600439B00 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4B70C7622F01DF700439B00 /* BBQNotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				D4B70C7722F01DF700439B00 /* NotificationViewController.h */,
+				D4B70C7822F01DF700439B00 /* NotificationViewController.m */,
+				D4B70C7A22F01DF700439B00 /* MainInterface.storyboard */,
+				D4B70C7D22F01DF700439B00 /* Info.plist */,
+			);
+			path = BBQNotificationContent;
+			sourceTree = "<group>";
+		};
+		D4B70C8522F0236D00439B00 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D4B70C8622F0236D00439B00 /* mylog@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D4D6CC3E22EEDAEB00280580 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6CC4122EEDB8100280580 /* IPSaveDefaluts.h */,
+				D4D6CC4022EEDB8100280580 /* IPSaveDefaluts.m */,
+				D4D6CC3F22EEDB7700280580 /* JKUserDefaultKeys.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,15 +207,34 @@
 				589C1FE822425A00004A4405 /* Sources */,
 				589C1FE922425A00004A4405 /* Frameworks */,
 				589C1FEA22425A00004A4405 /* Resources */,
+				D4B70C8422F01DF700439B00 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D4B70C7F22F01DF700439B00 /* PBXTargetDependency */,
 			);
 			name = BBQ;
 			productName = BBQ;
 			productReference = 589C1FEC22425A00004A4405 /* BBQ.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D4B70C6F22F01DF600439B00 /* BBQNotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B70C8322F01DF700439B00 /* Build configuration list for PBXNativeTarget "BBQNotificationContent" */;
+			buildPhases = (
+				D4B70C6C22F01DF600439B00 /* Sources */,
+				D4B70C6D22F01DF600439B00 /* Frameworks */,
+				D4B70C6E22F01DF600439B00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBQNotificationContent;
+			productName = BBQNotificationContent;
+			productReference = D4B70C7022F01DF600439B00 /* BBQNotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -125,6 +246,17 @@
 				ORGANIZATIONNAME = sherwin.chen;
 				TargetAttributes = {
 					589C1FEB22425A00004A4405 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					D4B70C6F22F01DF600439B00 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -143,6 +275,7 @@
 			projectRoot = "";
 			targets = (
 				589C1FEB22425A00004A4405 /* BBQ */,
+				D4B70C6F22F01DF600439B00 /* BBQNotificationContent */,
 			);
 		};
 /* End PBXProject section */
@@ -152,12 +285,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B70C8722F0236D00439B00 /* mylog@2x.png in Resources */,
 				589C2007224278C8004A4405 /* LaunchScreen.storyboard in Resources */,
 				589C1FF922425A02004A4405 /* Assets.xcassets in Resources */,
 				589C1FF722425A00004A4405 /* Main.storyboard in Resources */,
 				58390D8A2250C50A008CB07E /* CouponTableViewCell.xib in Resources */,
 				58390D8C2250FC8E008CB07E /* CouponTableHeadView.xib in Resources */,
 				5814362122632051004B9974 /* ChangeCouponTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B70C6E22F01DF600439B00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B70C8822F0238700439B00 /* mylog@2x.png in Resources */,
+				D4B70C7C22F01DF700439B00 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,13 +314,31 @@
 				58390D832250B73E008CB07E /* CouponViewController.m in Sources */,
 				589C1FF422425A00004A4405 /* ViewController.m in Sources */,
 				589C1FFF22425A02004A4405 /* main.m in Sources */,
+				D4D6CC4222EEDB8100280580 /* IPSaveDefaluts.m in Sources */,
 				58390D892250C50A008CB07E /* CouponTableViewCell.m in Sources */,
+				D4D6CC3D22EED64300280580 /* SHLocalNotice.m in Sources */,
 				589C1FF122425A00004A4405 /* AppDelegate.m in Sources */,
 				5814361F22631A08004B9974 /* CouponTableHeadViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4B70C6C22F01DF600439B00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B70C7922F01DF700439B00 /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4B70C7F22F01DF700439B00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4B70C6F22F01DF600439B00 /* BBQNotificationContent */;
+			targetProxy = D4B70C7E22F01DF700439B00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		589C1FF522425A00004A4405 /* Main.storyboard */ = {
@@ -194,6 +355,14 @@
 				589C2006224278C8004A4405 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D4B70C7A22F01DF700439B00 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4B70C7B22F01DF700439B00 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,10 +485,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = BBQ/BBQ.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9L66M2KMX;
 				INFOPLIST_FILE = BBQ/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,16 +505,55 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = BBQ/BBQ.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9L66M2KMX;
 				INFOPLIST_FILE = BBQ/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmt.BBQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4B70C8122F01DF700439B00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9L66M2KMX;
+				INFOPLIST_FILE = BBQNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmt.BBQ.BBQNotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4B70C8222F01DF700439B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9L66M2KMX;
+				INFOPLIST_FILE = BBQNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmt.BBQ.BBQNotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -366,6 +575,15 @@
 			buildConfigurations = (
 				589C200322425A02004A4405 /* Debug */,
 				589C200422425A02004A4405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4B70C8322F01DF700439B00 /* Build configuration list for PBXNativeTarget "BBQNotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B70C8122F01DF700439B00 /* Debug */,
+				D4B70C8222F01DF700439B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
